@@ -30,9 +30,9 @@ public class ExibirpDao {
 
 	try {
 		//Dethalar
-			ps = conexao.prepareStatement("SELECT nomeprofessor, datanascprofessor, nomemaeprofessor, titulacaoprofessor FROM prova1.professor");
+			ps = conexao.prepareStatement("SELECT nomeprofessor, datanascprofessor, nomemaeprofessor, titulacaoprofessor FROM prova1.professor where idprofessor != 100");
 			
-			/*ps.setInt(1, idprofessor);*/
+			ps.setInt(1, idprofessor);
 			
 			rs = ps.executeQuery();
 			while(rs.next()) {
